@@ -35,7 +35,8 @@ async function createWindow () {
   MAIN_WINDOW = new BrowserWindow(winOptions)
 
   // and load the index.html of the app.
-  MAIN_WINDOW.loadFile('example/index.html')
+  // MAIN_WINDOW.loadFile('example/index.html')
+  MAIN_WINDOW.loadURL('http://localhost:8080')
 
   // Open the DevTools.
   MAIN_WINDOW.webContents.openDevTools()
