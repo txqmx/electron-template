@@ -14,8 +14,8 @@ const config = {
           // enableRemoteModule: true, 
           preload: path.join(__dirname, '../preload.js')
         },
-        frame: true,
-        //titleBarStyle: 'hidden'
+        frame: false,
+        // titleBarStyle: 'hidden'
       },
 }
 
