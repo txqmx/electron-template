@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, BrowserView} = require('electron')
+const {app, BrowserWindow,protocol, BrowserView} = require('electron')
 const path = require('path')
 const setup = require('./electron/setup')
 const config = require('./electron/config.js')
@@ -13,6 +13,12 @@ setup()
 async function initialize(){
   app.whenReady().then(() => {
     createWindow()
+    
+    // 自定义file协议
+    protocol.registerFileProtocol('atom', (request, callback) => {
+      const url = request.url.substr(7)
+      callback(decodeURI(path.normalize(url)))
+    })
   
     app.on('activate', function () {
       // On macOS it's common to re-create a window in the app when the

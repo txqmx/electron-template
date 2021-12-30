@@ -12,8 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^16.0.4",
     "debug": "^4.1.1",
+    "electron": "^16.0.4",
+    "fluent-ffmpeg": "^2.1.2",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-convert": "^1.2.0",
